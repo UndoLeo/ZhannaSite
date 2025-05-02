@@ -1,0 +1,943 @@
+main{
+    margin: 0px;
+    padding: 0px;
+}
+body {
+    margin: 0;
+    background: url('/Images/green-thread-animated.svg') top center / 100% auto no-repeat;
+    min-height: 130vh;
+  }
+  /* Планшеты (768px и больше) */
+  @media (min-width: 768px) {
+    body {
+      font-size: 18px;
+      padding: 20px;
+    }
+  }
+  
+  /* Десктопы (1024px и больше) */
+  @media (min-width: 1024px) {
+    body {
+      font-size: 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+  }
+header{
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+.navbar{
+    display: flex;
+    flex-wrap: nowrap;
+    margin-top: 5px;
+    padding-right: 100px;
+}
+.navbar li {
+    text-decoration: none;
+    list-style: none;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.navbar li a {
+    text-decoration: none;
+    font-size: large;
+    color: grey;
+    border-bottom: 0px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.underline-one {
+    color: grey;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none; /* Убираем подчеркивание */
+}
+.underline-one:after {
+	content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px; /* Высота линии */
+    background-color: rgb(0, 0, 0); /* Цвет подчеркивания при исчезании линии*/
+    transition: width 0.5s; /* Время эффекта */
+}
+
+.underline-one:hover:after {
+	content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px; /* Высота линии */
+    transition: width 0.5s;  /* Время эффекта */
+    background-color: rgb(130, 236, 104); 
+}
+/*syles for infobox image box */
+.Infobox {
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.Infobox .contentbox {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.Infobox .contentbox:last-child{
+    padding: 20px;
+    align-items: center;
+    border-radius: 10px;
+    flex-wrap: wrap;
+
+}
+.aboutme{
+    backdrop-filter: blur(5px);
+    font-size: 20px;
+    padding: 7px;
+    border-radius: 5px;
+    margin: 10px;
+    box-shadow: -10px -10px 15px rgba(255,255,255,0.5),
+    10px 10px 15px rgba(70,70,70,0.12);
+}
+
+.imagesBox {
+    align-items: center;
+}
+.imagesBox .hover-text-one:first-child { 
+    margin-bottom: 60px;
+}
+.imagesBox .hover-text-one:last-child{
+    margin-top: 60px;
+}
+/*CSS Для картинок на первой старнице */
+
+/* Общие стили */
+*, *:after, *:before { 
+	box-sizing: border-box; 
+}
+.clearfix:before, .clearfix:after { 
+	content: ''; 
+	display: table; 
+}
+.clearfix:after { 
+	clear: both; 
+}
+.hover-text-one {
+	overflow: hidden;
+	margin: 0;
+	width: 100%;
+    height: 50%;
+	list-style: none;
+	text-align: center;
+}
+.hover-text-one figure {
+	position: relative;
+	z-index: 1;
+	display: inline-block;
+	overflow: hidden;
+	background: #527c82;
+	text-align: center;
+	cursor: pointer;
+}
+.hover-text-one figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	opacity: 0.8;
+}
+.hover-text-one figure figcaption {
+	padding: 2em;
+	color: #fffefe;
+	text-transform: uppercase;
+	font-size: 1.5em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.hover-text-one figure figcaption::before,
+.hover-text-one figure figcaption::after {
+	pointer-events: none;
+}
+.hover-text-one figure figcaption{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.hover-text-one figure h3 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+.hover-text-one figure h3 span {
+	font-weight: 800;
+}
+.hover-text-one figure h3,
+.hover-text-one figure p {
+	margin: 0;
+}
+.hover-text-one figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+/* Эффект при наведении */
+figure.effect-text-four figcaption {
+	text-align: right;
+}
+figure.effect-text-four h3,
+figure.effect-text-four p {
+	position: absolute;
+	right: 30px;
+	left: 30px;
+	padding: 10px 0;
+}
+figure.effect-text-four p {
+	bottom: 30px;
+	line-height: 1.5;
+	-webkit-transform: translate3d(0,100%,0);
+	transform: translate3d(0,100%,0);
+}
+figure.effect-text-four h3 {
+	top: 30px;
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+	-webkit-transform: translate3d(0,20px,0);
+	transform: translate3d(0,20px,0);
+}
+figure.effect-text-four:hover h3 {
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+figure.effect-text-four h3::after {
+	position: absolute;
+	top: 100%;
+	left: 0;
+	width: 100%;
+	height: 4px;
+	background: #fff;
+	content: '';
+	-webkit-transform: translate3d(0,40px,0);
+	transform: translate3d(0,40px,0);
+}
+figure.effect-text-four h3::after,
+figure.effect-text-four p {
+	opacity: 0;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+}
+figure.effect-text-four:hover h3::after,
+figure.effect-text-four:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+/* Конец css для картинок */
+/* Пасхалка в конце страницы */
+        /* Стили для пасхалки */
+        .easter-egg {
+            position: fixed;
+            bottom: -300px; /* Скрыто за экраном */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            max-width: 400px;
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            text-align: center;
+            transition: bottom 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+            z-index: 1000;
+            border: 3px solid #3aab6b;
+        }
+
+        .easter-egg h2 {
+            color: #2a5c3a;
+            margin-top: 0;
+            font-size: 24px;
+        }
+
+        .easter-egg p {
+            color: #555;
+            line-height: 1.5;
+        }
+
+        /* Декоративный элемент */
+        .easter-egg::before {
+            content: "✨";
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 40px;
+        }
+
+    /* studys conatiner*/
+    /* Контейнер */
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 40px 40px 40px 160px;
+}
+
+/* Заголовок */
+.header {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.header h1 {
+    color: #2a5c3a;
+    font-size: 2.5rem;
+}
+
+/* Блоки образования */
+.education-blocks {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.education-block {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    border-left: 4px solid #3aab6b;
+    transition: transform 0.3s ease;
+}
+
+.education-block:hover {
+    transform: translateY(-5px);
+}
+
+.education-block h2 {
+    color: #2a5c3a;
+    margin-top: 0;
+    font-size: 1.8rem;
+}
+
+.education-info p {
+    margin: 10px 0;
+}
+
+.school-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #3aab6b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.school-link:hover {
+    background-color: #2e8b57;
+}
+/* fjob block*/
+/* Стили для страницы профессии */
+.profession-main {
+    padding-top: 80px; /* Отступ под закрепленный хедер */
+}
+
+.profession-section {
+    margin-bottom: 60px;
+}
+
+.profession-title {
+    color: #2a5c3a;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+}
+
+.profession-description {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.program-details {
+    flex: 1;
+    backdrop-filter: blur(3px);
+}
+
+.program-heading {
+    color: #2a5c3a;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.program-text {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.program-disciplines {
+    margin: 25px 0;
+    padding-left: 20px;
+}
+
+.discipline-item {
+    margin-bottom: 10px;
+    position: relative;
+    line-height: 1.5;
+}
+
+.university-link {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background-color: #3aab6b;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    font-weight: 600;
+}
+
+.university-link:hover {
+    background-color: #2e8b57;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.profession-visual {
+    flex: 1;
+    text-align: center;
+}
+
+.profession-image {
+    max-width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.profession-image:hover {
+    transform: scale(1.02);
+}
+
+.image-description {
+    margin-top: 12px;
+    font-style: italic;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.activity-examples {
+    margin-top: 60px;
+}
+
+.examples-heading {
+    text-align: center;
+    color: #2a5c3a;
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+}
+
+.activities-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.activity-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.activity-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.activity-image {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.activity-caption {
+    padding: 16px;
+    text-align: center;
+    margin: 0;
+    font-weight: 600;
+    color: #333;
+}
+/* Часть с достижениями */
+/* Основные стили */
+.achievements-main {
+    padding-top: 80px;
+}
+
+.page-main-title {
+    text-align: center;
+    color: #2a5c3a;
+    margin-bottom: 50px;
+    font-size: 2.4rem;
+}
+
+.section-title {
+    color: #2a5c3a;
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.8rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 80px;
+    height: 3px;
+    background: #3aab6b;
+    margin: 15px auto 0;
+}
+
+/* Секция CSS-слайдера */
+.css-slider {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.slider-container {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease;
+}
+
+.slide {
+    width: 33.333%;
+    position: relative;
+    min-height: 450px;
+}
+
+/* Прячем радио-кнопки */
+input[name="slider"] {
+    display: none;
+}
+
+/* Логика переключения слайдов */
+#slide1:checked ~ .slider-container {
+    transform: translateX(0);
+}
+#slide2:checked ~ .slider-container {
+    transform: translateX(-33.333%);
+}
+#slide3:checked ~ .slider-container {
+    transform: translateX(-66.666%);
+}
+
+/* Стили для навигации */
+.slider-nav {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    z-index: 10;
+}
+
+.slider-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.5);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+/* Активная точка */
+#slide1:checked ~ .slider-nav label:nth-child(1),
+#slide2:checked ~ .slider-nav label:nth-child(2),
+#slide3:checked ~ .slider-nav label:nth-child(3) {
+    background: white;
+    transform: scale(1.2);
+}
+
+/* Кнопки навигации */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    background: rgba(255,255,255,0.7);
+    color: #2a5c3a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    font-weight: bold;
+    font-size: 1.5rem;
+    border: none;
+}
+
+.prev { left: 20px; }
+.next { right: 20px; }
+
+.prev:hover, .next:hover {
+    background: white;
+}
+/* Стили для контейнера слайдов */
+.slider-container {
+    display: flex;
+    width: 300%;
+    transition: transform 0.5s ease;
+    height: 450px; /* Фиксированная высота слайдера */
+}
+
+/* Стили для отдельных слайдов */
+.slide {
+    width: 33.333%;
+    position: relative;
+    overflow: hidden; /* Обрезаем выходящие за границы элементы */
+}
+
+/* Стили для изображений */
+.slide-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Сохраняет пропорции и заполняет контейнер */
+    object-position: center; /* Центрируем изображение */
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* Стили для контента поверх изображения */
+.slide-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(42, 92, 58, 0.85);
+    color: white;
+    padding: 25px;
+    z-index: 2; /* Чтобы контент был поверх изображения */
+}
+/* Секция с широкими фото */
+.wide-photo-section {
+    margin-bottom: 80px;
+}
+
+.wide-cards-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wide-card {
+    display: flex;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.wide-card:hover {
+    transform: translateY(-5px);
+}
+
+.wide-card-image {
+    width: 40%;
+    min-height: 250px;
+    object-fit: cover;
+}
+
+.wide-card-content {
+    width: 60%;
+    padding: 30px;
+    background: white;
+}
+
+.wide-card-title {
+    color: #2a5c3a;
+    margin-top: 0;
+    font-size: 1.4rem;
+}
+
+.wide-card-subtitle {
+    color: #3aab6b;
+    font-weight: 600;
+    margin: 10px 0;
+}
+
+.wide-card-text {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Секция анимированных карточек */
+.animated-cards-section {
+    margin-bottom: 60px;
+}
+
+.animated-cards-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.animated-card {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.6s;
+}
+
+.card-front {
+    background: linear-gradient(135deg, #3aab6b, #2a5c3a);
+    color: white;
+}
+
+.card-back {
+    background: white;
+    transform: rotateY(180deg);
+    color: #555;
+}
+
+.animated-card:hover .card-front {
+    transform: rotateY(180deg);
+}
+
+.animated-card:hover .card-back {
+    transform: rotateY(360deg);
+}
+
+.card-title {
+    margin: 0 0 10px;
+    font-size: 1.3rem;
+    text-align: center;
+}
+
+.card-year {
+    margin: 0;
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.card-description {
+    margin: 0;
+    line-height: 1.5;
+    text-align: center;
+}
+
+/* Ссылка на портфолио */
+.portfolio-link-wrapper {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.portfolio-main-link {
+    display: inline-block;
+    padding: 15px 40px;
+    background: #2a5c3a;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: all 0.3s;
+    border: 2px solid #2a5c3a;
+}
+
+.portfolio-main-link:hover {
+    background: white;
+    color: #2a5c3a;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(42, 92, 58, 0.2);
+}
+/* Основные стили страницы */
+.photo-page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+}
+
+/* Шапка */
+.photo-header {
+    text-align: center;
+    padding: 40px 0;
+    animation: photoFadeIn 1s ease-out;
+}
+
+.photo-main-title {
+    font-size: 2.8rem;
+    color: #2e8b57;
+    font-weight: 300;
+    margin: 0;
+    letter-spacing: 1px;
+}
+
+/* Секция автора */
+.author-section {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin: 60px 0;
+    backdrop-filter: blur(5px);
+    border-radius: 20px;
+}
+
+.author-photo {
+    flex: 1;
+    min-height: 400px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.author-photo:hover {
+    transform: scale(1.02);
+}
+
+.author-text {
+    flex: 1;
+}
+
+.photo-intro-text {
+    font-size: 1.5rem;
+    color: #2e8b57;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+.photo-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Галерея */
+.gallery-section {
+    margin: 80px 0;
+}
+
+.gallery-title {
+    text-align: center;
+    font-size: 2rem;
+    color: #2e8b57;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.gallery-item {
+    aspect-ratio: 1/1;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Подвал */
+.photo-footer {
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 60px;
+    border-top: 1px solid #eee;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+/* Анимации */
+@keyframes photoFadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .photo-gallery {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .author-section {
+        flex-direction: column;
+    }
+    
+    .author-photo {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .photo-gallery {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .photo-main-title {
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .photo-gallery {
+        grid-template-columns: 1fr;
+    }
+    
+    .photo-main-title {
+        font-size: 1.8rem;
+    }
+}

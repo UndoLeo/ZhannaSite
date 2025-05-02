@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+                <li><a class="underline-one" href="landingpage.html">Главная страница</a></li>
+                <li><a class="underline-one" href="studys.html">Образование</a></li>
+                <li><a class="underline-one" href="fjob.html">Моя будующая профессия</a></li>
+                <li><a class="underline-one" href="achivments.html">Мои достижения</a></li>
+                <li><a class="underline-one" href="hobby.html">Моё хобби</a></li>
+        </div>
+    </header>
+    
+    <div class="container">
+        <main class="achievements-main">
+            <h1 class="page-main-title">Мои достижения</h1>
+            
+            <!-- Секция 1: CSS-слайдер -->
+            <section class="slider-section">
+                <h2 class="section-title">Российские студенческие отряды</h2>
+                <div class="css-slider">
+                    <!-- Радио-кнопки для управления -->
+                    <input type="radio" name="slider" id="slide1" checked>
+                    <input type="radio" name="slider" id="slide2">
+                    <input type="radio" name="slider" id="slide3">
+                    
+                    <div class="slider-container">
+                        <!-- Слайд 1 -->
+                        <div class="slide">
+                            <img src="Images/ro1.jpg" alt="Награда Приморского края" class="slide-image">
+                            <div class="slide-content">
+                                <h3 class="slide-title">Благдораность от РСО</h3>
+                                <p class="slide-subtitle">Приморский край, 2024</p>
+                                <p class="slide-description">За огромный вклад в развитие организации</p>
+                            </div>
+                            <label for="slide3" class="prev">‹</label>
+                            <label for="slide2" class="next">›</label>
+                        </div>
+                        
+                        <!-- Слайд 2 -->
+                        <div class="slide">
+                            <img src="Images/ro2.jpg" alt="Мероприятие РСО" class="slide-image">
+                            <div class="slide-content">
+                                <h3 class="slide-title">Организатор игротек</h3>
+                                <p class="slide-subtitle">На базе ВВГУ, 2024</p>
+                                <p class="slide-description">Разработка программы игротеки для новичков в студенческих отрядах</p>
+                            </div>
+                            <label for="slide1" class="prev">‹</label>
+                            <label for="slide3" class="next">›</label>
+                        </div>
+                        
+                        <!-- Слайд 3 -->
+                        <div class="slide">
+                            <img src="Images/ro3.jpg" alt="Вузовский конкурс" class="slide-image">
+                            <div class="slide-content">
+                                <h3 class="slide-title">Творческий фестиваль</h3>
+                                <p class="slide-subtitle">Внутривузовский уровень, 2021-2023</p>
+                                <p class="slide-description">Победитель в номинцаии отрядный танец</p>
+                            </div>
+                            <label for="slide2" class="prev">‹</label>
+                            <label for="slide1" class="next">›</label>
+                        </div>
+                    </div>
+                    
+                    <div class="slider-nav">
+                        <label for="slide1" class="slider-dot"></label>
+                        <label for="slide2" class="slider-dot"></label>
+                        <label for="slide3" class="slider-dot"></label>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Секция 2: Широкие фото-карточки -->
+            <section class="wide-photo-section">
+                <h2 class="section-title">Волонтерская деятельность</h2>
+                <div class="wide-cards-container">
+                    <!-- Карточка 1 -->
+                    <article class="wide-card">
+                        <img src="Images/volunteer1.jpg" alt="Волонтерский проект" class="wide-card-image">
+                        <div class="wide-card-content">
+                            <h3 class="wide-card-title">Мастер штаба СО по социальной деятельности</h3>
+                            <p class="wide-card-subtitle">Организатор выездов в государтсвенные учреждения г.Владивостока</p>
+                            <p class="wide-card-text">Благодарность социальному куратору ШСО ВВГУ за вклад в развитие организации и Вуза</p>
+                        </div>
+                    </article>
+                    
+                    <!-- Карточка 2 -->
+                    <article class="wide-card">
+                        <img src="Images/volunteer2.jpg" alt="Эко-акция" class="wide-card-image">
+                        <div class="wide-card-content">
+                            <h3 class="wide-card-title">Всероссийская патриотическая акция "Снежный десант"</h3>
+                            <p class="wide-card-subtitle">Выезды в отдалённые уголки Приморского края</p>
+                            <p class="wide-card-text">Уборка территории ВВГУ</p>
+                        </div>
+                    </article>
+                    
+                    <!-- Карточка 3 -->
+                    <article class="wide-card">
+                        <img src="Images/volunteer3.jpg" alt="Благодарность" class="wide-card-image">
+                        <div class="wide-card-content">
+                            <h3 class="wide-card-title">Благодарность губернатора</h3>
+                            <p class="wide-card-subtitle">Приморский край, 2023</p>
+                            <p class="wide-card-text">За вклад в организацию волонтерской помощи во время сложной эпидемиологической ситуации</p>
+                        </div>
+                    </article>
+                </div>
+            </section>
+            
+            <!-- Секция 3: Анимированные карточки -->
+            <section class="animated-cards-section">
+                <h2 class="section-title">Научные достижения</h2>
+                <div class="animated-cards-container">
+                    <!-- Карточка 1 -->
+                    <div class="animated-card">
+                        <div class="card-front">
+                            <h3 class="card-title">Публикация в на сайте ВВГУ</h3>
+                            <p class="card-year">2024</p>
+                        </div>
+                        <div class="card-back">
+                            <p class="card-description">Переход на бюджетную основу</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Карточка 2 -->
+                    <div class="animated-card">
+                        <div class="card-front">
+                            <h3 class="card-title">Повышенная стипендия</h3>
+                            <p class="card-year">2025</p>
+                        </div>
+                        <div class="card-back">
+                            <p class="card-description">Получение повышенной академической стипендии за отличную успеваемость</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Карточка 3 -->
+                    <div class="animated-card">
+                        <div class="card-front">
+                            <h3 class="card-title">Научная конференция "Интелектуальный потенциал вузов"</h3>
+                            <p class="card-year">2025</p>
+                        </div>
+                        <div class="card-back">
+                            <p class="card-description">Победитель научной конференции ВВГУ</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Ссылка на портфолио -->
+            <div class="portfolio-link-wrapper">
+                <a href="https://students.vvsu.ru/education/stud/184263/Busygina_Zhanna_Andreevna" class="portfolio-main-link" target="_blank">Посмотреть полное портфолио</a>
+            </div>
+        </main>
+    </div>
+</body>
+</html>

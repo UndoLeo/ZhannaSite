@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body style="height: 1800px;">
+    <header>
+        <div class="navbar">
+                <li><a class="underline-one" href="landingpage.html">Главная страница</a></li>
+                <li><a class="underline-one" href="studys.html">Образование</a></li>
+                <li><a class="underline-one" href="fjob.html">Моя будующая профессия</a></li>
+                <li><a class="underline-one" href="achivments.html">Мои достижения</a></li>
+                <li><a class="underline-one" href="hobby.html">Моё хобби</a></li>
+        </div>
+    </header>
+<div class="Infobox">
+    <div class="contentbox">
+        <div class="imagesBox">
+            <div class="hover-text-one">
+                <figure class="effect-text-four">
+                  <img src="/Images/image1box.jpg" alt=""/>
+                    <figcaption>
+                  <h3>Мои</h3>
+                  <p>Протяну руку , тому кто повяз в луже</p>
+                    </figcaption>			
+                 </figure>
+              </div>
+              <div class="hover-text-one">
+                <figure class="effect-text-four">
+                  <img src="/Images/image2box.jpg" alt=""/>
+                    <figcaption>
+                  <h3>Цитатки</h3>
+                  <p>Я знаю что это то место где меня любят</p>
+                    </figcaption>			
+                 </figure>
+              </div>
+        </div>
+    </div>
+        <div class="contentbox">
+            <div class="aboutme">
+                Привет! Меня зовут Жанна, мне 18 лет, и я горжусь тем, что я — настоящий ребенок Владивостока. Этот город — моя колыбель, моя любовь и мой дом. Здесь я родилась, сделала первые шаги, здесь же и решила строить своё будущее. Сейчас я учусь во Владивостокском государственном университете на специальности «Организация работы с молодёжью», потому что верю: молодость — это энергия, которую нужно направлять в правильное русло. А ещё потому, что сама с детства не могу сидеть на месте!      
+            </div>
+            <div class="aboutme">
+                Моя страсть — движение и творчество  
+                С самого детства во мне бурлила энергия: я танцевала, осваивала музыкальные инструменты, пела и постоянно искала новые способы самовыражения. Но настоящий переворот в моей жизни случился в 15 лет, когда я вступила в студенческий педагогический отряд «Ихтис». С этого момента всё изменилось — я поняла, что моё призвание не просто быть активной, а делиться этой энергией с другими. Работа с детьми в лагерях, организация мероприятий, вдохновение подростков — вот что наполняет мои дни смыслом.      
+            </div>
+            <div class="aboutme">
+                Будущее, которое я создаю  
+                Уже четыре года я погружена в мир педагогики, и с каждым днём убеждаюсь: нет ничего ценнее, чем видеть, как загораются глаза детей, когда они открывают что-то новое. Я учусь, чтобы однажды стать тем человеком, который поможет молодёжи найти себя — так же, как когда-то нашла своё призвание я. Владивосток дал мне крылья, а «Ихтис» — уверенность в том, что я могу вести за собой других. И это только начало! 🌊✨  
+            </div>
+        </div>
+    </div>
+    <div class="easter-egg" id="easterEgg">
+        <h2>Пасхалка найдена!</h2>
+        <p>Поздравляем! Ты обнаружил секретное сообщение.</p>
+    </div>
+    <script>
+        window.addEventListener('scroll', function() {
+            // Показываем пасхалку при достижении конца страницы
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 50) {
+                document.getElementById('easterEgg').style.bottom = '30px';
+            } else {
+                document.getElementById('easterEgg').style.bottom = '-300px';
+            }
+        });
+    </script>
+</body>
+</html>
