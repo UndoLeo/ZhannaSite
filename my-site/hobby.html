@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <div class="navbar">
+                <li><a class="underline-one" href="landingpage.html">Главная страница</a></li>
+                <li><a class="underline-one" href="studys.html">Образование</a></li>
+                <li><a class="underline-one" href="fjob.html">Моя будующая профессия</a></li>
+                <li><a class="underline-one" href="achivments.html">Мои достижения</a></li>
+                <li><a class="underline-one" href="hobby.html">Моё хобби</a></li>
+        </div>
+    </header>
+    <!DOCTYPE html>
+    <div class="photo-page">
+        <header class="photo-header">
+            <h1 class="photo-main-title">Моя страсть к фотографии</h1>
+        </header>
+        <main class="photo-content">
+            <section class="author-section">
+                <div class="author-photo" style="background-image: url('/img/me-with-camera.jpg');"></div>
+                <div class="author-text">
+                    <p class="photo-intro-text">Меня зовут Жанна, и фотография — мой способ видеть мир.</p>
+                    <p class="photo-description">
+                        Каждый кадр — это история. Я снимаю не просто моменты, а эмоции, 
+                        которые делают обычные вещи особенными. Моя камера стала продолжением взгляда, 
+                        помогая замечать красоту в повседневности.
+                    </p>
+                </div>
+            </section>
+            
+            <section class="gallery-section">
+                <h2 class="gallery-title">Мои работы</h2>
+                <div class="photo-gallery">
+                    <!-- 16 фотографий -->
+                    <div class="gallery-item" style="background-image: url('/img/photo1.jpg');"></div>
+                    <div class="gallery-item" style="background-image: url('/img/photo2.jpg');"></div>
+                    <div class="gallery-item" style="background-image: url('/img/photo3.jpg');"></div>
+                    <div class="gallery-item" style="background-image: url('/img/photo4.jpg');"></div>
+                    <div class="gallery-item" style="background-image: url('/img/photo5.jpg');"></div>
+                    <div class="gallery-item" style="background-image: url('/img/photo6.jpg');"></div>
+                    <div class="gallery-item" style="background-image: url('/img/photo7.jpg');"></div>
+                    <div class="gallery-item" style="background-image: url('/img/photo8.jpg');"></div>
+                    <div class="gallery-item" style="background-image: url('/img/photo9.jpg');"></div>
+                    <div class="gallery-item" style="background-image: url('/img/photo10.jpg');"></div>
+                    <div class="gallery-item" style="background-image: url('/img/photo11.jpg');"></div>
+                    <div class="gallery-item" style="background-image: url('/img/photo12.jpg');"></div>
+                    <div class="gallery-item" style="background-image: url('/img/photo13.jpg');"></div>
+                    <div class="gallery-item" style="background-image: url('/img/photo14.jpg');"></div>
+                    <div class="gallery-item" style="background-image: url('/img/photo15.jpg');"></div>
+                    <div class="gallery-item" style="background-image: url('/img/photo16.jpg');"></div>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="photo-footer">
+            <p class="copyright">&copy; <span id="year"></span> Жанна. Все права защищены.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Автоматическое обновление года в футере
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
